@@ -12,7 +12,14 @@
 
 
 <div class="app-wrapper">
-    <button class="generate-dog">Generate Dog</button>
-    <div id="image-container"></div>
+    <div class ="input-group" action="DogController.php" method="POST">
+        <input type="text" class="search-box" id="search-box"> </input>
+        <button type="submit" class="generate-dog">Generate Dog</button>
+    </div>
+
+    <!--Image will be placed below-->
+    <div id="image-container">
+
+    </div>
 </div>
 @endsection

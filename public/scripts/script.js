@@ -2,8 +2,10 @@ $( document ).ready(function() {
     console.log( "ready!" );
 
     $('.generate-dog').click(() => {
+      const breed = $('#search-box').val().toLowerCase();
+
         $.ajax({
-          url: '/fetch_dog', // URL of the Laravel endpoint
+          url: '/fetch_dog/' + breed, // URL of the Laravel endpoint
           type: 'GET',
           success: function(response) {
             if (response.image_url) {
@@ -24,6 +26,12 @@ $( document ).ready(function() {
           },
           error: function(xhr) {
             console.error('Error:', xhr.responseText);
+
+            $('#image-container').html('');
+
+            const imgElement = $('<img>').attr('src', 'path/to/your/default-not-found-image.jpg').attr('alt', 'Not Found');
+            
+            $('#image-container').append(imgElement);
           }
         });
       });

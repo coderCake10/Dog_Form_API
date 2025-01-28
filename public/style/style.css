@@ -15,7 +15,11 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .app-wrapper .generate-dog {
@@ -42,3 +46,28 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.generate-dog {
+    width: 200px;
+}
+
+.search-box {
+  width: 200px;
+  padding: 2px;
+  font-size: 16px;
+  border: 2px solid #cccccc65;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-box:focus {
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add glow effect */
+  }
